@@ -1,0 +1,162 @@
+/* ==========================================================================
+   1. GLOBAL & BACKGROUND CONFIGURATION (Elite Dark Mode)
+   ========================================================================== */
+.stApp {
+    background: linear-gradient(135deg, rgba(11, 15, 25, 0.94), rgba(20, 27, 45, 0.97)), 
+                url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header et Navigation */
+header[data-testid="stHeader"] {
+    background: transparent !important;
+    visibility: visible !important;
+}
+
+.stAppViewBlockContainer {
+    padding-top: 3rem !important;
+    max-width: 780px !important;
+}
+
+/* Nettoyage des blocs vides */
+div[data-testid="stVerticalBlock"] > div:empty {
+    display: none !important;
+}
+
+/* ==========================================================================
+   2. TYPOGRAPHY & HEADERS (Glowing Effects)
+   ========================================================================== */
+h1 {
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    text-align: center;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.5rem !important;
+    text-shadow: 0 0 25px rgba(239, 68, 68, 0.3);
+    background: transparent !important;
+}
+
+h3, h2 {
+    color: #f1f5f9 !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.2px;
+    margin-bottom: 1.2rem !important;
+}
+
+p, label {
+    color: #94a3b8 !important;
+    font-size: 1.05rem !important;
+    font-weight: 400;
+}
+
+/* ==========================================================================
+   3. INTERACTIVE RADIO CARDS (Advanced Glassmorphism)
+   ========================================================================== */
+div[class*="stRadio"] {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+div[class*="stRadio"] label {
+    background: rgba(30, 41, 59, 0.55) !important;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 15px 22px !important;
+    border-radius: 16px !important;
+    margin-bottom: 10px !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+div[class*="stRadio"] label:hover {
+    background: rgba(30, 41, 59, 0.85) !important;
+    border-color: rgba(239, 68, 68, 0.6) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px -4px rgba(239, 68, 68, 0.25);
+}
+
+/* ==========================================================================
+   4. PREMIUM BUTTONS (Gradient & Neon Glow)
+   ========================================================================== */
+.stButton > button {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%) !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    font-size: 1.1rem !important;
+    border-radius: 16px !important;
+    border: none !important;
+    padding: 15px 30px !important;
+    box-shadow: 0 8px 25px rgba(239, 68, 68, 0.45) !important;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    width: 100%;
+    letter-spacing: 0.5px;
+}
+
+.stButton > button:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 14px 32px rgba(239, 68, 68, 0.65) !important;
+    background: linear-gradient(135deg, #f87171 0%, #ef4444 100%) !important;
+}
+
+/* ==========================================================================
+   5. SIDEBAR STYLING (Immersive Sidebar)
+   ========================================================================== */
+section[data-testid="stSidebar"] {
+    background-color: rgba(9, 13, 23, 0.96) !important;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+section[data-testid="stSidebar"] .stButton > button {
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: none !important;
+}
+
+section[data-testid="stSidebar"] .stButton > button:hover {
+    background: rgba(239, 68, 68, 0.2) !important;
+    border-color: #ef4444 !important;
+}
+
+/* ==========================================================================
+   6. INPUTS, ALERTS & EXPANDERS
+   ========================================================================== */
+.stTextInput input {
+    border-radius: 14px !important;
+    background-color: rgba(15, 23, 42, 0.75) !important;
+    color: #f8fafc !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    padding: 14px 18px !important;
+    transition: all 0.3s ease;
+}
+
+.stTextInput input:focus {
+    border-color: #ef4444 !important;
+    box-shadow: 0 0 16px rgba(239, 68, 68, 0.35);
+}
+
+.stAlert {
+    border-radius: 16px !important;
+    background-color: rgba(30, 41, 59, 0.85) !important;
+    border: 1px solid rgba(239, 68, 68, 0.35) !important;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 35px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* Style des expanders de l'historique */
+.streamlit-expanderHeader {
+    background-color: rgba(30, 41, 59, 0.4) !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    color: #f1f5f9 !important;
+}
